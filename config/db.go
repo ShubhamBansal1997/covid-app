@@ -36,11 +36,12 @@ func MongoConnect() {
 
 func RedisConnect() (*cache.Client, error){
 	// Db config
-	redisHOST, redisPORT := os.Getenv("REDIS_HOST"), os.Getenv("REDIS_PORT")
+	redisHOST, redisPORT, redisPassword := os.Getenv("REDIS_HOST"), os.Getenv("REDIS_PORT"), os.Getenv("REDIS_PASSWORD")
 	ringOpt := &redis.RingOptions{
 		Addrs: map[string]string{
 			redisHOST: redisPORT,
 		},
+		Password: redisPassword,
 	}
 	cacheClient, err := cache.NewClient(
 		cache.ClientWithAdapter(redis.NewAdapter(ringOpt)),
