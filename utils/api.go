@@ -165,7 +165,7 @@ func GetCovidData() ([]CovidData, int, error) {
 }
 
 func GetStateData(lat string, long string) (string, error) {
-	log.Print("Came here")
+	log.Print("Geo Location API Executed")
 	baseUrl := os.Getenv("GEOLOCATION_API")
 	api := baseUrl + lat + "," + long
 	response, err := http.Get(api)
