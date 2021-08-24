@@ -155,7 +155,7 @@ type swaggerInfo struct {
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = swaggerInfo{
 	Version:     "1.0",
-	Host:        "localhost:8000",
+	Host:        "fast-dusk-76401.herokuapp.com/",
 	BasePath:    "/",
 	Schemes:     []string{},
 	Title:       "Covid-19 Stats API",

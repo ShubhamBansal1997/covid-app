@@ -22,7 +22,7 @@ definitions:
       status:
         type: integer
     type: object
-host: localhost:8000
+host: fast-dusk-76401.herokuapp.com/
 info:
   contact:
     email: support@swagger.io
