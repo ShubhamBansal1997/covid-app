@@ -1,0 +1,86 @@
+basePath: /
+definitions:
+  controllers.Covid:
+    properties:
+      country_cases:
+        type: integer
+      id:
+        type: string
+      state:
+        type: string
+      state_cases:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  controllers.Response:
+    properties:
+      data:
+        $ref: '#/definitions/controllers.Covid'
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+host: localhost:8000
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server Covid-19 stats.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Covid-19 Stats API
+  version: "1.0"
+paths:
+  /fetch-data:
+    get:
+      consumes:
+      - application/json
+      description: fetch covid-19 state-wise data and store in the db
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controllers.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controllers.Response'
+      summary: Fetch Covid-19 Stats
+  /get-data:
+    get:
+      consumes:
+      - application/json
+      description: Get covid-19 stats as per your location (latitude and longitude)
+      parameters:
+      - description: latitude
+        in: query
+        name: lat
+        type: string
+      - description: longitude
+        in: query
+        name: long
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controllers.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controllers.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/controllers.Response'
+      summary: Get Covid-19 Stats
+swagger: "2.0"
