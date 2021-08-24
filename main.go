@@ -9,8 +9,8 @@ import (
 	"github.com/labstack/gommon/log"
 	echoSwagger "github.com/swaggo/echo-swagger"
 	"net/http"
+	"os"
 )
-
 
 // @title Covid-19 Stats API
 // @version 1.0
@@ -38,8 +38,11 @@ func main() {
 	e.GET("/swagger/*", echoSwagger.WrapHandler)
 	e.GET("/fetch-data", controllers.FetchData)
 	e.GET("/get-data", controllers.GetData)
-
-	e.Logger.Fatal(e.Start(":8000"))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = ":8000"
+	}
+	e.Logger.Fatal(e.Start(":" + port))
 }
 
 func welcome(c echo.Context) error {
