@@ -2,7 +2,7 @@ package config
 
 import (
 	"context"
-	"covid-app/controllers"
+	"github.com/ShubhamBansal1997/covid-app/controllers"
 	cache "github.com/SporkHubr/echo-http-cache"
 	"github.com/SporkHubr/echo-http-cache/adapter/redis"
 	"go.mongodb.org/mongo-driver/mongo"

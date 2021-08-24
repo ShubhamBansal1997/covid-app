@@ -1,9 +1,9 @@
 package main
 
 import (
-	"covid-app/config"
-	"covid-app/controllers"
-	_ "covid-app/docs"
+	"github.com/ShubhamBansal1997/covid-app/config"
+	"github.com/ShubhamBansal1997/covid-app/controllers"
+	_ "github.com/ShubhamBansal1997/covid-app/docs"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"

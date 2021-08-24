@@ -1,4 +1,4 @@
-module covid-app
+module github.com/ShubhamBansal1997/covid-app
 
 go 1.16
 

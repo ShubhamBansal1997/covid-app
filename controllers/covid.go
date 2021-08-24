@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"context"
-	"covid-app/utils"
+	"github.com/ShubhamBansal1997/covid-app/utils"
 	"github.com/labstack/echo/v4"
 	uuid "github.com/satori/go.uuid"
 	"go.mongodb.org/mongo-driver/bson"
