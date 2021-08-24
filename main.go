@@ -40,7 +40,7 @@ func main() {
 	e.GET("/get-data", controllers.GetData)
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = ":8000"
+		port = "8000"
 	}
 	e.Logger.Fatal(e.Start(":" + port))
 }
