@@ -12,26 +12,6 @@ Covid-19 API to get covid-19 stats in your state and country
 * mongodb
 * redis
 
-```
-Ingress Service 🙌 
-Manages all the webhook API(s) 
-```
-
-# Contents
-
-* [Global Requisites](#global-requisites)
-* [App Structure](#app-structure)
-* [Install, Configure & Run](#install-configure--run)
-* [List of Routes](#list-of-routes)
-
-# Global Requisites
-
-* node (>= 10.5.0)
-* tsc (>= 3.0.1)
-* typescript (>= 3.0.1)
-* mongoose (>= 3.6.2)
-* redis
-
 # Install, Configure & Run
 
 Below mentioned are the steps to install, configure & run in your platform/distributions.
